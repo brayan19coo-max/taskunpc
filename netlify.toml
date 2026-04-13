@@ -1,4 +1,3 @@
 [build]
-  base = "taskunpc"
   command = "npm run build"
-  publish = "taskunpc/dist"
+  publish = "dist"
