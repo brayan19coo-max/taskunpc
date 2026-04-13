@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { tareasIniciales } from "../data";
+import { tareasIniciales } from "../data/tareas";
 
 const TareasContext = createContext();
 

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTareas } from "../context/TareasContext";
 import TareaCard from "../components/TareaCard";
+import FiltroBar from "../components/FiltroBar";
+import BotonNuevo from "../components/BotonNuevo";
 
 function Inicio() {
   const { tareas } = useTareas();
@@ -14,9 +16,8 @@ function Inicio() {
 
   return (
     <div>
-      <button onClick={() => setFiltro("todas")}>Todas</button>
-      <button onClick={() => setFiltro("pendientes")}>Pendientes</button>
-      <button onClick={() => setFiltro("completadas")}>Completadas</button>
+      <FiltroBar filtro={filtro} setFiltro={setFiltro} />
+      <BotonNuevo />
       {tareasFiltradas.map((tarea) => (
         <TareaCard key={tarea.id} {...tarea} />
       ))}
